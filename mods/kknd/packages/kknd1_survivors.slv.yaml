@@ -1,0 +1,200 @@
+0.soun: 0.wav # Speech / Unknown / Okay
+1.soun: 1.wav # Speech / Unknown / Receiving
+2.soun: 2.wav # Effect / Bang
+3.soun: 3.wav # Effect / Explosion
+4.soun: 4.wav # Effect / Machinegun
+5.soun: 5.wav # Effect / MachinegunLight
+6.soun: 6.wav # Effect / Minigun
+7.soun: 7.wav # Effect / MachinegunMedium
+8.soun: 8.wav # Effect / MachinegunHeavy
+9.soun: 9.wav # Effect / Cannon
+10.soun: 10.wav # Effect / ExplosionLight
+11.soun: 11.wav # Effect / Ricochet 1
+12.soun: 12.wav # Effect / Ricochet 2
+13.soun: 13.wav # Effect / Ricochet 3
+14.soun: 14.wav # Effect / Rocket
+15.soun: 15.wav # Effect / PowerUp
+16.soun: 16.wav # Effect / Pistol
+17.soun: 17.wav # Effect / Shotgun
+18.soun: 18.wav # Effect / Raygun
+#19.soun: 19.wav # Missing
+20.soun: 20.wav # Speech / SurvivorsAnnouncer / OurBaseIsUnderAttack
+21.soun: 21.wav # Speech / SurvivorsUnit / BuildingBreached
+22.soun: 22.wav # Speech / SurvivorsUnit / TheyveTakenOver
+23.soun: 23.wav # Speech / SurvivorsAnnouncer / BuildingLost
+#24.soun: 24.wav # Missing
+25.soun: 25.wav # Speech / SurvivorsUnit / BomberReady
+26.soun: 26.wav # Speech / SurvivorsAnnouncer / BuildingBreached
+27.soun: 27.wav # Speech / SurvivorsAnnouncer / BuildingReady
+28.soun: 28.wav # Speech / SurvivorsUnit / BuildingUnderRepair
+29.soun: 29.wav # Speech / SurvivorsUnit / BuildingTaken
+30.soun: 30.wav # Speech / SurvivorsUnit / CatchThisPal
+31.soun: 31.wav # Speech / SurvivorsAnnouncer / Completed
+32.soun: 32.wav # Speech / SurvivorsAnnouncer / ConstructionCompleted
+33.soun: 33.wav # Speech / SurvivorsUnit / ReportingForDuty
+#34.soun: 34.wav # Missing
+35.soun: 35.wav # Speech / SurvivorsAnnouncer / Finished
+#36.soun: 36.wav # Missing
+37.soun: 37.wav # Speech / SurvivorsUnit / ImIn
+#38.soun: 38.wav # Missing
+39.soun: 39.wav # Speech / SurvivorsAnnouncer / WeHaveInbounds
+40.soun: 40.wav # Speech / SurvivorsUnit / EnemyBuildingInfiltrated
+#41.soun: 41.wav # Missing
+42.soun: 42.wav # Speech / SurvivorsAnnouncer / TargetLocatedAndLocked
+43.soun: 43.wav # Speech / SurvivorsUnit / Moving
+#44.soun: 44.wav # Missing
+45.soun: 45.wav # Speech / SurvivorsUnit / Excellent
+46.soun: 46.wav # Speech / SurvivorsAnnouncer / OilLow
+47.soun: 47.wav # Speech / SurvivorsAnnouncer / OurOilSuppliesAreLow
+48.soun: 48.wav # Speech / SurvivorsUnit / Okay
+49.soun: 49.wav # Speech / SurvivorsUnit / AlrightyThen
+50.soun: 50.wav # Speech / SurvivorsUnit / Yeah
+51.soun: 51.wav # Speech / SurvivorsUnit / Ready
+52.soun: 52.wav # Speech / SurvivorsAnnouncer / Repairing
+53.soun: 53.wav # Speech / SurvivorsUnit / Receiving
+54.soun: 54.wav # Speech / SurvivorsAnnouncer / ResearchStarted
+55.soun: 55.wav # Speech / SurvivorsAnnouncer / ResearchCompleted
+56.soun: 56.wav # Speech / SurvivorsAnnouncer / OurRigIsUnderAttack
+57.soun: 57.wav # Speech / SurvivorsAnnouncer / Researching
+58.soun: 58.wav # Speech / SurvivorsUnit / AirstrikeReady
+59.soun: 59.wav # Speech / SurvivorsUnit / IllTakeHim
+60.soun: 60.wav # Speech / SurvivorsUnit / OurTankerIsUnderAttack
+61.soun: 61.wav # Speech / SurvivorsUnit / ApproachingTarget
+62.soun: 62.wav # Speech / SurvivorsAnnouncer / TechlevelIncreased
+#63.soun: 63.wav # Missing
+#64.soun: 64.wav # Missing
+#65.soun: 65.wav # Missing
+66.soun: 66.wav # Speech / SurvivorsAnnouncer / WilburBomberReady
+67.soun: 67.wav # Speech / SurvivorsAnnouncer / WeLostOneOfOurBuildings
+68.soun: 68.wav # Speech / SurvivorsUnit / Yes
+69.soun: 69.wav # Speech / SurvivorsUnit / YesSir
+70.soun: 70.wav # Speech / SurvivorsUnit / WhatTheHell
+71.soun: 71.wav # Speech / SurvivorsVeteran / AsYouWish
+72.soun: 72.wav # Speech / SurvivorsVeteran / IllShoot
+73.soun: 73.wav # Speech / SurvivorsVeteran / ConciderItDead
+74.soun: 74.wav # Speech / SurvivorsVeteran / DamnitTheyreInside
+75.soun: 75.wav # Speech / SurvivorsVeteran / HelpRequested
+76.soun: 76.wav # Speech / SurvivorsVeteran / ImThere
+77.soun: 77.wav # Speech / SurvivorsVeteran / WereInToStay
+78.soun: 78.wav # Speech / SurvivorsVeteran / ImListening
+79.soun: 79.wav # Speech / SurvivorsAnnouncer(OLD) / StructureDown
+#80.soun: 80.wav # Missing
+#81.soun: 81.wav # Missing
+#82.soun: 82.wav # Missing
+83.soun: 83.wav # Speech / SurvivorsVeteran / UnfriendlyFound
+84.soun: 84.wav # Speech / SurvivorsVeteran / Whatever
+85.soun: 85.wav # Speech / SurvivorsVeteran / Yup
+86.soun: 86.wav # Effect / Fire
+87.soun: 87.wav # Effect / Laser
+88.soun: 88.wav # Effect / Missile
+89.soun: 89.wav # Effect / Arrow
+90.soun: 90.wav # Effect / ArrowHit
+#91.soun: 91.wav # Only in kknd1_evolved.slv
+#92.soun: 92.wav # Only in kknd1_evolved.slv
+#93.soun: 93.wav # Only in kknd1_evolved.slv
+#94.soun: 94.wav # Only in kknd1_evolved.slv
+#95.soun: 95.wav # Only in kknd1_evolved.slv
+#96.soun: 96.wav # Only in kknd1_evolved.slv
+#97.soun: 97.wav # Only in kknd1_evolved.slv
+#98.soun: 98.wav # Missing
+#99.soun: 99.wav # Missing
+#100.soun: 100.wav # Missing
+#101.soun: 101.wav # Only in kknd1_evolved.slv
+#102.soun: 102.wav # Only in kknd1_evolved.slv
+#103.soun: 103.wav # Missing
+#104.soun: 104.wav # Only in kknd1_evolved.slv
+#105.soun: 105.wav # Only in kknd1_evolved.slv
+#106.soun: 106.wav # Missing
+#107.soun: 107.wav # Only in kknd1_evolved.slv
+#108.soun: 108.wav # Only in kknd1_evolved.slv
+#109.soun: 109.wav # Only in kknd1_evolved.slv
+#110.soun: 110.wav # Only in kknd1_evolved.slv
+#111.soun: 111.wav # Missing
+#112.soun: 112.wav # Missing
+#113.soun: 113.wav # Missing
+#114.soun: 114.wav # Missing
+#115.soun: 115.wav # Missing
+#116.soun: 116.wav # Only in kknd1_evolved.slv
+#117.soun: 117.wav # Only in kknd1_evolved.slv
+#118.soun: 118.wav # Only in kknd1_evolved.slv
+#119.soun: 119.wav # Only in kknd1_evolved.slv
+#120.soun: 120.wav # Missing
+#121.soun: 121.wav # Missing
+#122.soun: 122.wav # Only in kknd1_evolved.slv
+#123.soun: 123.wav # Only in kknd1_evolved.slv
+#124.soun: 124.wav # Only in kknd1_evolved.slv
+#125.soun: 125.wav # Only in kknd1_evolved.slv
+#126.soun: 126.wav # Only in kknd1_evolved.slv
+#127.soun: 127.wav # Only in kknd1_evolved.slv
+#128.soun: 128.wav # Only in kknd1_evolved.slv
+#129.soun: 129.wav # Only in kknd1_evolved.slv
+#130.soun: 130.wav # Missing
+#131.soun: 131.wav # Only in kknd1_evolved.slv
+#132.soun: 132.wav # Only in kknd1_evolved.slv
+#133.soun: 133.wav # Only in kknd1_evolved.slv
+#134.soun: 134.wav # Missing
+#135.soun: 135.wav # Missing
+#136.soun: 136.wav # Only in kknd1_evolved.slv
+#137.soun: 137.wav # Missing
+#138.soun: 138.wav # Missing
+#139.soun: 139.wav # Only in kknd1_evolved.slv
+#140.soun: 140.wav # Only in kknd1_evolved.slv
+#141.soun: 141.wav # Only in kknd1_evolved.slv
+#142.soun: 142.wav # Only in kknd1_evolved.slv
+#143.soun: 143.wav # Missing
+#144.soun: 144.wav # Missing
+#145.soun: 145.wav # Missing
+#146.soun: 146.wav # Missing
+#147.soun: 147.wav # Missing
+#148.soun: 148.wav # Only in kknd1_evolved.slv
+#149.soun: 149.wav # Missing
+#150.soun: 150.wav # Missing
+#151.soun: 151.wav # Missing
+#152.soun: 152.wav # Missing
+#153.soun: 153.wav # Only in kknd1_evolved.slv
+#154.soun: 154.wav # Only in kknd1_evolved.slv
+#155.soun: 155.wav # Missing
+#156.soun: 156.wav # Only in kknd1_evolved.slv
+#157.soun: 157.wav # Missing
+#158.soun: 158.wav # Only in kknd1_evolved.slv
+#159.soun: 159.wav # Only in kknd1_evolved.slv
+#160.soun: 160.wav # Only in kknd1_evolved.slv
+161.soun: 161.wav # Effect / Splat
+162.soun: 162.wav # Effect / Wasp
+163.soun: 163.wav # Effect / Bomb
+#164.soun: 164.wav # Only in kknd1_evolved.slv
+#165.soun: 165.wav # Only in kknd1_evolved.slv
+166.soun: 166.wav # Effect / Mission1
+167.soun: 167.wav # Effect / Mission2
+#168.soun: 168.wav # Only in kknd1_evolved.slv
+#169.soun: 169.wav # Only in kknd1_evolved.slv
+#170.soun: 170.wav # Only in kknd1_evolved.slv
+#171.soun: 171.wav # Only in kknd1_evolved.slv
+#172.soun: 172.wav # Only in kknd1_evolved.slv
+#173.soun: 173.wav # Only in kknd1_evolved.slv
+174.soun: 174.wav # Effect / Death1
+175.soun: 175.wav # Effect / Death2
+176.soun: 176.wav # Effect / Death3
+177.soun: 177.wav # Effect / Death4
+178.soun: 178.wav # Effect / Death5
+179.soun: 179.wav # Bunker / TargetLocked
+180.soun: 180.wav # Bunker / Target
+181.soun: 181.wav # Bunker / SystemsReady
+182.soun: 182.wav # Bunker / Mirrorfied
+183.soun: 183.wav # Bunker / OnYourCommand
+184.soun: 184.wav # Bunker / Affirmative
+185.soun: 185.wav # Bunker / KrushKillAndDestroy
+186.soun: 186.wav # Bunker / WhatTheHell
+187.soun: 187.wav # Effect / Energy
+188.soun: 188.wav # Effect / Gort
+189.soun: 189.wav # Effect / Bunker
+190.soun: 190.wav # Effect / Reload
+191.soun: 191.wav # Effect / GetOil
+192.soun: 192.wav # Speech / Scout / YouGotItCommander
+193.soun: 193.wav # Effect / PlaceBuilding
+194.soun: 194.wav # Effect / Scream1
+195.soun: 195.wav # Effect / Scream2
+196.soun: 196.wav # Effect / Scream3
+197.soun: 197.wav # Effect / Scream4
+198.soun: 198.wav # Effect / Scream5
+199.soun: 199.wav # Effect / Scream6

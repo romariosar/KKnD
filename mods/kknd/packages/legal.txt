@@ -1,0 +1,33 @@
+== ALL PACKAGES ARE SHAREWARE! ==
+Due to that fact, cinematics and music have to be provided by the full version.
+
+Mirror: https://planet.kknd2.com/demos/
+Here are the package sources:
+
+KKND Xtreme Demo
+- kknd1_evolved.slv
+- kknd1_sprites.lvl
+- kknd1_survivors.slv
+
+KKND early Evolved Demo
+- kknd1_evolved_beta.slv
+- kknd1_sprites_beta.lvl
+
+KKND 2 Krossfire Demo
+- kknd2_evolved.spk
+- kknd2_series9.spk
+- kknd2_sprites.lpk
+- kknd2_survivors.spk
+- intro.vbc
+
+KKND 2 Kollateral Damage (Demo Build #145)
+- kknd2_sprites_alpha.lpk
+
+KKND 2 Krossfire Beta Demo
+- kknd2_evolved_beta1.spk
+- kknd2_series9_beta1.spk
+- kknd2_sprites_beta1.lpk
+- kknd2_survivors_beta1.spk
+
+KKND 2 Series 9 Beta Demo
+- kknd2_sprites_beta2.lpk

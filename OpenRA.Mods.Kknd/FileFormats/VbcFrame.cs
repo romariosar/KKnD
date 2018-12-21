@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2016-2018 The KKnD Developers (see AUTHORS)
+ * Copyright 2016-2019 The KKnD Developers (see AUTHORS)
  * This file is part of KKnD, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -17,15 +17,28 @@ namespace OpenRA.Mods.Kknd.FileFormats
 {
 	public class VbcFrame
 	{
-		private int2 globalMotion;
-		public byte[] Audio;
-		private SegmentStream video;
-		private SegmentStream colors;
+		private static readonly int[] Patterns =
+		{
+			0x0660, 0xFF00, 0xCCCC, 0xF000, 0x8888, 0x000F, 0x1111, 0xFEC8,
+			0x8CEF, 0x137F, 0xF731, 0xC800, 0x008C, 0x0013, 0x3100, 0xCC00,
+			0x00CC, 0x0033, 0x3300, 0x0FF0, 0x6666, 0x00F0, 0x0F00, 0x2222,
+			0x4444, 0xF600, 0x8CC8, 0x006F, 0x1331, 0x318C, 0xC813, 0x33CC,
+			0x6600, 0x0CC0, 0x0066, 0x0330, 0xF900, 0xC88C, 0x009F, 0x3113,
+			0x6000, 0x0880, 0x0006, 0x0110, 0xCC88, 0xFC00, 0x00CF, 0x88CC,
+			0x003F, 0x1133, 0x3311, 0xF300, 0x6FF6, 0x0603, 0x08C6, 0x8C63,
+			0xC631, 0x6310, 0xC060, 0x0136, 0x136C, 0x36C8, 0x6C80, 0x324C
+		};
+
+		private readonly int2 globalMotion;
+		private readonly SegmentStream video;
+		private readonly SegmentStream colors;
+		public readonly byte[] Audio;
+		public readonly string Text;
+		public readonly int Duration;
 
 		public VbcFrame(Stream stream)
 		{
-			// TODO this crashes on kknd1 intro briefings!
-			/*var length = */stream.ReadUInt32();
+			stream.ReadUInt32(); // frame size
 			var flags = stream.ReadUInt16();
 
 			if ((flags & 0x0001) != 0)
@@ -49,25 +62,16 @@ namespace OpenRA.Mods.Kknd.FileFormats
 			}
 
 			if ((flags & 0x0020) != 0)
-				/*duration = */stream.ReadUInt16();
+				Duration = stream.ReadUInt16();
+			
+			if ((flags & 0x0040) != 0)
+				Text = stream.ReadASCII(stream.ReadInt32() - 4);
 		}
 
-		public byte[] ApplyFrame(byte[] oldFrame, uint[] palette, int2 size)
+		public byte[] GetFrame(byte[] oldFrame, uint[] palette, int2 size)
 		{
 			var newFrame = new byte[oldFrame.Length];
 			var offset = globalMotion.X + globalMotion.Y * size.X;
-
-			int[] patterns =
-			{
-				0x0660, 0xFF00, 0xCCCC, 0xF000, 0x8888, 0x000F, 0x1111, 0xFEC8,
-				0x8CEF, 0x137F, 0xF731, 0xC800, 0x008C, 0x0013, 0x3100, 0xCC00,
-				0x00CC, 0x0033, 0x3300, 0x0FF0, 0x6666, 0x00F0, 0x0F00, 0x2222,
-				0x4444, 0xF600, 0x8CC8, 0x006F, 0x1331, 0x318C, 0xC813, 0x33CC,
-				0x6600, 0x0CC0, 0x0066, 0x0330, 0xF900, 0xC88C, 0x009F, 0x3113,
-				0x6000, 0x0880, 0x0006, 0x0110, 0xCC88, 0xFC00, 0x00CF, 0x88CC,
-				0x003F, 0x1133, 0x3311, 0xF300, 0x6FF6, 0x0603, 0x08C6, 0x8C63,
-				0xC631, 0x6310, 0xC060, 0x0136, 0x136C, 0x36C8, 0x6C80, 0x324C
-			};
 
 			if (colors != null)
 			{
@@ -91,110 +95,88 @@ namespace OpenRA.Mods.Kknd.FileFormats
 				{
 					var blockType = (blockTypes >> (6 - i * 2)) & 0x03;
 
-					switch (blockType)
+					if (blockType == 0)
 					{
-						case 0:
+						for (var y = 0; y < 4; y++)
 						{
+							var dst = (by * 4 + y) * size.X + bx * 4;
+							Array.Copy(oldFrame, dst + offset, newFrame, dst, 4);
+						}
+					}
+					else if (blockType == 1)
+					{
+						var motion = video.ReadUInt8();
+
+						if (motion == 0)
+						{
+							for (var y = 0; y < 4; y++)
+								Array.Copy(video.ReadBytes(4), 0, newFrame, (by * 4 + y) * size.X + bx * 4, 4);
+						}
+						else
+						{
+							var motionX = ((motion & 0xf) ^ 8) - 8;
+							var motionY = ((motion >> 4) ^ 8) - 8;
+
 							for (var y = 0; y < 4; y++)
 							{
 								var dst = (by * 4 + y) * size.X + bx * 4;
-								Array.Copy(oldFrame, dst + offset, newFrame, dst, 4);
+								Array.Copy(oldFrame, dst + offset + motionY * size.X + motionX, newFrame, dst, 4);
 							}
-
-							break;
 						}
+					}
+					else if (blockType == 2)
+					{
+						var color = video.ReadUInt8();
 
-						case 1:
+						for (var y = 0; y < 4; y++)
+						for (var x = 0; x < 4; x++)
+							newFrame[(by * 4 + y) * size.X + bx * 4 + x] = color;
+					}
+					else if (blockType == 3)
+					{
+						var patternData = video.ReadUInt8();
+						var patternType = patternData >> 6;
+						var pattern = Patterns[patternData & 0x3f];
+
+						if (patternType == 0)
 						{
-							var motion = video.ReadUInt8();
-
-							if (motion == 0)
-							{
-								for (var y = 0; y < 4; y++)
-									Array.Copy(video.ReadBytes(4), 0, newFrame, (by * 4 + y) * size.X + bx * 4, 4);
-							}
-							else
-							{
-								var motionX = ((motion & 0xf) ^ 8) - 8;
-								var motionY = ((motion >> 4) ^ 8) - 8;
-
-								for (var y = 0; y < 4; y++)
-								{
-									var dst = (by * 4 + y) * size.X + bx * 4;
-									Array.Copy(oldFrame, dst + offset + motionY * size.X + motionX, newFrame, dst, 4);
-								}
-							}
-
-							break;
-						}
-
-						case 2:
-						{
-							var color = video.ReadUInt8();
+							var pixel0 = video.ReadUInt8();
+							var pixel1 = video.ReadUInt8();
 
 							for (var y = 0; y < 4; y++)
 							for (var x = 0; x < 4; x++)
-								newFrame[(by * 4 + y) * size.X + bx * 4 + x] = color;
-							break;
+								newFrame[(by * 4 + y) * size.X + bx * 4 + x] =
+									((pattern >> (y * 4 + x)) & 1) == 0 ? pixel0 : pixel1;
 						}
-
-						case 3:
+						else if (patternType == 1)
 						{
-							var patternData = video.ReadUInt8();
-							var patternType = patternData >> 6;
-							var pattern = patterns[patternData & 0x3f];
+							var pixel = video.ReadUInt8();
 
-							switch (patternType)
+							for (var y = 0; y < 4; y++)
+							for (var x = 0; x < 4; x++)
 							{
-								case 0:
-								{
-									var pixel0 = video.ReadUInt8();
-									var pixel1 = video.ReadUInt8();
+								var dst = (by * 4 + y) * size.X + bx * 4 + x;
 
-									for (var y = 0; y < 4; y++)
-									for (var x = 0; x < 4; x++)
-										newFrame[(by * 4 + y) * size.X + bx * 4 + x] = ((pattern >> (y * 4 + x)) & 1) == 0 ? pixel0 : pixel1;
-									break;
-								}
-
-								case 1:
-								{
-									var pixel = video.ReadUInt8();
-
-									for (var y = 0; y < 4; y++)
-									for (var x = 0; x < 4; x++)
-									{
-										var dst = (by * 4 + y) * size.X + bx * 4 + x;
-
-										if (((pattern >> (y * 4 + x)) & 1) == 0)
-											newFrame[dst] = oldFrame[dst + offset];
-										else
-											newFrame[dst] = pixel;
-									}
-
-									break;
-								}
-
-								case 2:
-								{
-									var pixel = video.ReadUInt8();
-
-									for (var y = 0; y < 4; y++)
-									for (var x = 0; x < 4; x++)
-									{
-										var dst = (by * 4 + y) * size.X + bx * 4 + x;
-
-										if (((pattern >> (y * 4 + x)) & 1) == 1)
-											newFrame[dst] = oldFrame[dst + offset];
-										else
-											newFrame[dst] = pixel;
-									}
-
-									break;
-								}
+								if (((pattern >> (y * 4 + x)) & 1) == 0)
+									newFrame[dst] = oldFrame[dst + offset];
+								else
+									newFrame[dst] = pixel;
 							}
+						}
+						else if (patternType == 2)
+						{
+							var pixel = video.ReadUInt8();
 
-							break;
+							for (var y = 0; y < 4; y++)
+							for (var x = 0; x < 4; x++)
+							{
+								var dst = (by * 4 + y) * size.X + bx * 4 + x;
+
+								if (((pattern >> (y * 4 + x)) & 1) == 1)
+									newFrame[dst] = oldFrame[dst + offset];
+								else
+									newFrame[dst] = pixel;
+							}
 						}
 					}
 				}

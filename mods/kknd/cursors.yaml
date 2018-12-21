@@ -1,4 +1,4 @@
 Cursors:
-	kknd|bits/cursor.png: cursor
+	kknd2_sprites|B_Cursors.mobd: B_Cursors
 		default:
 			Start: 0

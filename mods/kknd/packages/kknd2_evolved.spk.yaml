@@ -1,0 +1,183 @@
+#0.soun: 0.wav # Only in kknd2_survivors.spk
+#1.soun: 1.wav # Only in kknd2_survivors.spk
+#2.soun: 2.wav # Only in kknd2_survivors.spk
+#3.soun: 3.wav # Only in kknd2_survivors.spk
+#4.soun: 4.wav # Only in kknd2_survivors.spk
+#5.soun: 5.wav # Only in kknd2_survivors.spk
+#6.soun: 6.wav # Only in kknd2_survivors.spk
+#7.soun: 7.wav # Only in kknd2_survivors.spk
+#8.soun: 8.wav # Only in kknd2_survivors.spk
+#9.soun: 9.wav # Only in kknd2_survivors.spk
+#10.soun: 10.wav # Only in kknd2_survivors.spk
+#11.soun: 11.wav # Only in kknd2_survivors.spk
+#12.soun: 12.wav # Only in kknd2_survivors.spk
+#13.soun: 13.wav # Only in kknd2_survivors.spk
+#14.soun: 14.wav # Only in kknd2_survivors.spk
+#15.soun: 15.wav # Only in kknd2_survivors.spk
+#16.soun: 16.wav # Only in kknd2_survivors.spk
+#17.soun: 17.wav # Only in kknd2_survivors.spk
+#18.soun: 18.wav # Only in kknd2_survivors.spk
+#19.soun: 19.wav # Only in kknd2_survivors.spk
+#20.soun: 20.wav # Only in kknd2_survivors.spk
+#21.soun: 21.wav # Only in kknd2_survivors.spk
+#22.soun: 22.wav # Only in kknd2_survivors.spk
+#23.soun: 23.wav # Only in kknd2_survivors.spk
+#24.soun: 24.wav # Only in kknd2_survivors.spk
+#25.soun: 25.wav # Only in kknd2_survivors.spk
+#26.soun: 26.wav # Only in kknd2_survivors.spk
+#27.soun: 27.wav # Only in kknd2_survivors.spk
+#28.soun: 28.wav # Only in kknd2_survivors.spk
+#29.soun: 29.wav # Only in kknd2_survivors.spk
+#30.soun: 30.wav # Only in kknd2_survivors.spk
+#31.soun: 31.wav # Only in kknd2_survivors.spk
+#32.soun: 32.wav # Only in kknd2_survivors.spk
+#33.soun: 33.wav # Only in kknd2_survivors.spk
+#34.soun: 34.wav # Only in kknd2_survivors.spk
+#35.soun: 35.wav # Only in kknd2_survivors.spk
+#36.soun: 36.wav # Only in kknd2_survivors.spk
+#37.soun: 37.wav # Only in kknd2_survivors.spk
+#38.soun: 38.wav # Only in kknd2_survivors.spk
+#39.soun: 39.wav # Only in kknd2_survivors.spk
+#40.soun: 40.wav # Only in kknd2_survivors.spk
+41.soun: 41.wav # Speech / EvolvedAnnouncer / StructureCompleted
+42.soun: 42.wav # Speech / EvolvedAnnouncer / AStructureHasFallen
+43.soun: 43.wav # Speech / EvolvedAnnouncer / DustToDust
+44.soun: 44.wav # Speech / EvolvedAnnouncer / OutCampIsInTrouble
+45.soun: 45.wav # Speech / EvolvedUnit / FoundSome
+46.soun: 46.wav # Speech / EvolvedAnnouncer / EarthbloodDown
+47.soun: 47.wav # Speech / EvolvedAnnouncer / EarthbloodGone
+48.soun: 48.wav # Speech / EvolvedAnnouncer / TheGodsSendHelp
+49.soun: 49.wav # Speech / EvolvedAnnouncer / ExtractorUnderAttack
+50.soun: 50.wav # Speech / EvolvedAnnouncer / TheExtractorHasFallen
+51.soun: 51.wav # Speech / EvolvedAnnouncer / SpellBroken
+52.soun: 52.wav # Speech / EvolvedAnnouncer / WisdomBestode
+53.soun: 53.wav # Speech / EvolvedAnnouncer / WisdomPraiseBegin
+54.soun: 54.wav # Speech / EvolvedUnit / Hunting
+55.soun: 55.wav # Speech / EvolvedUnit / Banzai
+56.soun: 56.wav # Speech / EvolvedUnit / Attacking
+57.soun: 57.wav # Speech / EvolvedUnit / IKillIt
+58.soun: 58.wav # Speech / EvolvedUnit / Au
+59.soun: 59.wav # Speech / EvolvedUnit / TheyreAttacking
+60.soun: 60.wav # Speech / EvolvedUnit / Allright
+61.soun: 61.wav # Speech / EvolvedUnit / ImThere
+62.soun: 62.wav # Speech / EvolvedUnit / Traveling
+63.soun: 63.wav # Speech / EvolvedUnit / Moving
+64.soun: 64.wav # Speech / EvolvedUnit / TheresToMany
+65.soun: 65.wav # Speech / EvolvedUnit / Hm
+66.soun: 66.wav # Speech / EvolvedUnit / Huh
+67.soun: 67.wav # Speech / EvolvedUnit / Present
+68.soun: 68.wav # Speech / EvolvedUnit / What
+69.soun: 69.wav # Speech / EvolvedUnit / ISeeIt
+70.soun: 70.wav # Speech / EvolvedVeteran / ItWillBeDead
+71.soun: 71.wav # Speech / EvolvedVeteran / Death
+72.soun: 72.wav # Speech / EvolvedVeteran / TheyShotMe
+73.soun: 73.wav # Speech / EvolvedVeteran / WithHonor
+74.soun: 74.wav # Speech / EvolvedVeteran / OnTheMove
+75.soun: 75.wav # Speech / EvolvedVeteran / Allahea
+76.soun: 76.wav # Speech / EvolvedVeteran / IMove
+77.soun: 77.wav # Speech / EvolvedVeteran / YesMyChieftain
+78.soun: 78.wav # Speech / EvolvedVeteran / YouSpeak
+79.soun: 79.wav # Speech / EvolvedVeteran / YouTalkingToMe
+80.soun: 80.wav # Speech / EvolvedVeteran / GiveMePurpose
+81.soun: 81.wav # Speech / EvolvedAnnouncer / EnemyAttackPartySighted
+#82.soun: 82.wav # Only in kknd2_series9.spk
+#83.soun: 83.wav # Only in kknd2_series9.spk
+#84.soun: 84.wav # Only in kknd2_series9.spk
+#85.soun: 85.wav # Only in kknd2_series9.spk
+#86.soun: 86.wav # Only in kknd2_series9.spk
+#87.soun: 87.wav # Only in kknd2_series9.spk
+#88.soun: 88.wav # Only in kknd2_series9.spk
+#89.soun: 89.wav # Only in kknd2_series9.spk
+#90.soun: 90.wav # Only in kknd2_series9.spk
+#91.soun: 91.wav # Only in kknd2_series9.spk
+#92.soun: 92.wav # Only in kknd2_series9.spk
+#93.soun: 93.wav # Only in kknd2_series9.spk
+#94.soun: 94.wav # Only in kknd2_series9.spk
+#95.soun: 95.wav # Only in kknd2_series9.spk
+#96.soun: 96.wav # Only in kknd2_series9.spk
+#97.soun: 97.wav # Only in kknd2_series9.spk
+#98.soun: 98.wav # Only in kknd2_series9.spk
+#99.soun: 99.wav # Only in kknd2_series9.spk
+#100.soun: 100.wav # Only in kknd2_series9.spk
+#101.soun: 101.wav # Only in kknd2_series9.spk
+#102.soun: 102.wav # Only in kknd2_series9.spk
+#103.soun: 103.wav # Only in kknd2_series9.spk
+#104.soun: 104.wav # Only in kknd2_series9.spk
+#105.soun: 105.wav # Only in kknd2_series9.spk
+#106.soun: 106.wav # Only in kknd2_series9.spk
+#107.soun: 107.wav # Only in kknd2_series9.spk
+#108.soun: 108.wav # Only in kknd2_series9.spk
+#109.soun: 109.wav # Only in kknd2_series9.spk
+#110.soun: 110.wav # Only in kknd2_series9.spk
+#111.soun: 111.wav # Only in kknd2_series9.spk
+#112.soun: 112.wav # Only in kknd2_series9.spk
+#113.soun: 113.wav # Only in kknd2_series9.spk
+#114.soun: 114.wav # Only in kknd2_series9.spk
+#115.soun: 115.wav # Only in kknd2_series9.spk
+#116.soun: 116.wav # Only in kknd2_series9.spk
+#117.soun: 117.wav # Only in kknd2_series9.spk
+#118.soun: 118.wav # Only in kknd2_series9.spk
+#119.soun: 119.wav # Only in kknd2_series9.spk
+#120.soun: 120.wav # Only in kknd2_series9.spk
+#121.soun: 121.wav # Only in kknd2_series9.spk
+#122.soun: 122.wav # Only in kknd2_series9.spk
+123.soun: 123.wav # Creature / MastodonOrder
+124.soun: 124.wav # Creature / MastodonSelect
+125.soun: 125.wav # Creature / WolfOrder
+126.soun: 126.wav # Creature / WolfSelect
+127.soun: 127.wav # Creature / BeetleSelect
+128.soun: 128.wav # Creature / BeetleOrder
+129.soun: 129.wav # Creature / CrabSelect
+130.soun: 130.wav # Creature / CrabOrder
+131.soun: 131.wav # Creature / ScorpionSelect
+132.soun: 132.wav # Creature / ScorpionOrder
+133.soun: 133.wav # Effect / Death1
+134.soun: 134.wav # Effect / Death2
+135.soun: 135.wav # Effect / Death3
+136.soun: 136.wav # Effect / Death4
+137.soun: 137.wav # Effect / Death5
+138.soun: 138.wav # Bunker / WithPleasure
+139.soun: 139.wav # Bunker / PowerUp
+140.soun: 140.wav # Bunker / Acknowledged
+141.soun: 141.wav # Bunker / AsYouWish
+142.soun: 142.wav # Bunker / Confirmed
+143.soun: 143.wav # Bunker / Locked
+144.soun: 144.wav # Bunker / KrushKillAndDestroy
+145.soun: 145.wav # Bunker / Danger
+146.soun: 146.wav # TODO (bang or cannon new?)
+147.soun: 147.wav # Effect / Explosion
+148.soun: 148.wav # Effect / Machinegun
+149.soun: 149.wav # Effect / Cannon
+150.soun: 150.wav # Effect / ExplosionLight
+151.soun: 151.wav # Effect / Ricochet 1
+152.soun: 152.wav # Effect / Ricochet 2
+153.soun: 153.wav # Effect / Rocket
+154.soun: 154.wav # Effect / Shotgun
+155.soun: 155.wav # TODO Raygun or Gort?
+156.soun: 156.wav # Effect / Powerup
+157.soun: 157.wav # Effect / Fire
+158.soun: 158.wav # Effect / Laser
+159.soun: 159.wav # Effect / Missile
+160.soun: 160.wav # Effect / Arrow
+161.soun: 161.wav # Effect / ArrowHit
+162.soun: 162.wav # Effect / Splat
+163.soun: 163.wav # Effect / PlaceBuilding1 (old or used?)
+164.soun: 164.wav # Effect / Bunker
+165.soun: 165.wav # Effect / Click
+166.soun: 166.wav # TODO some ui effect?
+167.soun: 167.wav # Effect / PlaceBuilding2 (old or used?)
+168.soun: 168.wav # TODO (new laser)
+169.soun: 169.wav # TODO (new worm)
+170.soun: 170.wav # Effect / Bomb
+171.soun: 171.wav # Effect / EnergyUp
+172.soun: 172.wav # Effect / EnergyDown
+173.soun: 173.wav # Effect / LTA
+174.soun: 174.wav # TODO (new radiator)
+175.soun: 175.wav # Effect / Scream1
+176.soun: 176.wav # Effect / Scream2
+177.soun: 177.wav # Effect / Scream3
+178.soun: 178.wav # TODO (bang or cannon new?)
+#179.soun: 179.wav # missing
+#180.soun: 180.wav # missing
+181.soun: 181.wav # Creature / DemonSelect
+182.soun: 182.wav # Creature / DemonOrder

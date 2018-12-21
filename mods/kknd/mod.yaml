@@ -1,29 +1,60 @@
 Metadata:
-	Title: Game Chooser
+	Title: Krush Kill 'n' Destroy
 	Version: {DEV_VERSION}
-	Hidden: true
+	Website: https://www.kknd-game.com
+	WebIcon32: https://raw.githubusercontent.com/IceReaper/KKnD/master/packaging/linux/mod_32x32.png
+
+PackageFormats: LvlPackage
 
 Packages:
-	~^Content/: content
-	$kknd: kknd
 	./mods/common: common
+	$kknd: kknd
 
-Cursors:
-	kknd|cursors.yaml
+	kknd|packages/kknd1_sprites.lvl: kknd1_sprites
+	kknd|packages/kknd1_evolved.slv: kknd1_evolved
+	kknd|packages/kknd1_survivors.slv: kknd1_survivors
+
+	kknd|packages/kknd2_sprites.lpk: kknd2_sprites
+	kknd|packages/kknd2_evolved.spk: kknd2_evolved
+	kknd|packages/kknd2_series9.spk: kknd2_series9
+	kknd|packages/kknd2_survivors.spk: kknd2_survivors
+
+	kknd|packages/kknd1_sprites_beta.lvl: kknd1_sprites_beta
+	kknd|packages/kknd1_evolved_beta.slv: kknd1_evolved_beta
+
+	kknd|packages/kknd2_sprites_alpha.lpk: kknd2_sprites_alpha
+
+	kknd|packages/kknd2_sprites_beta1.lpk: kknd2_sprites_beta1
+	kknd|packages/kknd2_evolved_beta1.spk: kknd2_evolved_beta1
+	kknd|packages/kknd2_series9_beta1.spk: kknd2_series9_beta1
+	kknd|packages/kknd2_survivors_beta1.spk: kknd2_survivors_beta1
+
+	kknd|packages/kknd2_sprites_beta2.lpk: kknd2_sprites_beta2
+
+	~^Content/kknd1/: kknd1_retail
+	~^Content/kknd2/: kknd2_retail
 
 Assemblies:
 	common|OpenRA.Mods.Common.dll
 	kknd|OpenRA.Mods.Kknd.dll
 
-LoadScreen: GameSelectLoadScreen
+LoadScreen: LoadScreen
 
-Rules:
-	kknd|rules/modchooser.yaml
+SoundFormats: Wav
 
-Fonts:
-
-SpriteFormats: PngSheet
+SpriteFormats: PngSheet, Mobd
 
 SpriteSequenceFormat: DefaultSpriteSequence
 
 ModelSequenceFormat: PlaceholderModelSequence
+
+Cursors:
+	kknd|cursors.yaml
+
+Rules:
+	kknd|rules/cursors.yaml
+
+Fonts:
+	Regular:
+		Font: kknd|assets/unispace.ttf
+		Size: 14

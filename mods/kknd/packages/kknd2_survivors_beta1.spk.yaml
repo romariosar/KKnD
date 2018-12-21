@@ -1,0 +1,198 @@
+0.soun: 0.wav # Speech / Unknown / Okay
+1.soun: 1.wav # Speech / Unknown / Receiving
+2.soun: 2.wav # Effect / Bang
+3.soun: 3.wav # Effect / Explosion
+4.soun: 4.wav # Effect / Machinegun
+5.soun: 5.wav # Effect / MachinegunLight
+6.soun: 6.wav # Effect / Minigun
+7.soun: 7.wav # Effect / MachinegunMedium
+8.soun: 8.wav # Effect / MachinegunHeavy
+9.soun: 9.wav # Effect / Cannon
+10.soun: 10.wav # Effect / ExplosionLight
+11.soun: 11.wav # Effect / Ricochet 1
+12.soun: 12.wav # Effect / Ricochet 2
+13.soun: 13.wav # Effect / Ricochet 3
+14.soun: 14.wav # Effect / Rocket
+15.soun: 15.wav # Effect / Shotgun
+16.soun: 16.wav # TODO raygun?
+17.soun: 17.wav # Effect / Powerup
+18.soun: 18.wav # Effect / Fire
+19.soun: 19.wav # Effect / Laser
+20.soun: 20.wav # Effect / Missile
+21.soun: 21.wav # Effect / Arrow
+22.soun: 22.wav # Effect / ArrowHit
+23.soun: 23.wav # Effect / Splat
+24.soun: 24.wav # Effect / Wasp
+25.soun: 25.wav # Effect / Bomb
+26.soun: 26.wav # Effect / Mission1
+27.soun: 27.wav # Effect / Mission2
+28.soun: 28.wav # Effect / Energy
+29.soun: 29.wav # Effect / Reload
+30.soun: 30.wav # Effect / GetOil
+31.soun: 31.wav # Effect / PlaceBuilding
+32.soun: 32.wav # Speech / SurvivorsAnnouncer / AirUnitPrepped
+33.soun: 33.wav # Speech / SurvivorsAnnouncer / OurBaseIsUnderAttack
+34.soun: 34.wav # Speech / SurvivorsAnnouncer / NewBuildingCompleted
+35.soun: 35.wav # Speech / SurvivorsAnnouncer / BuildingDown
+36.soun: 36.wav # Speech / SurvivorsAnnouncer / BuildingDown
+37.soun: 37.wav # Speech / SurvivorsAnnouncer / OurCampsInTrouble
+38.soun: 38.wav # Speech / SurvivorsAnnouncer / ConstructibleReporting
+39.soun: 39.wav # Speech / SurvivorsAnnouncer / DamnItEnemyReinforcementsSighted
+40.soun: 40.wav # Speech / SurvivorsAnnouncer / InfantryReady
+41.soun: 41.wav # Speech / SurvivorsAnnouncer / Reporting
+42.soun: 42.wav # Speech / SurvivorsAnnouncer / LowOilWarning
+43.soun: 43.wav # Speech / SurvivorsAnnouncer / ThereGoesTheOil
+44.soun: 44.wav # Speech / SurvivorsAnnouncer / ReinforcementsDeployed
+45.soun: 45.wav # Speech / SurvivorsAnnouncer / OurRigIsBeingAttacked
+46.soun: 46.wav # Speech / SurvivorsAnnouncer / DrillrigDown
+47.soun: 47.wav # Speech / SurvivorsAnnouncer / ResearchCanceled
+48.soun: 48.wav # Speech / SurvivorsAnnouncer / ResearchComplete
+49.soun: 49.wav # Speech / SurvivorsAnnouncer / Researing
+50.soun: 50.wav # Speech / SurvivorsUnit / Okay
+51.soun: 51.wav # Speech / SurvivorsUnit / Okay
+52.soun: 52.wav # Speech / SurvivorsUnit / IllTakeHim
+53.soun: 53.wav # Speech / SurvivorsUnit / Okay
+54.soun: 54.wav # Speech / SurvivorsUnit / IllTakeHim
+55.soun: 55.wav # Speech / SurvivorsUnit / IllTakeHim
+56.soun: 56.wav # Speech / SurvivorsUnit / UnitDown
+57.soun: 57.wav # Speech / SurvivorsUnit / WereUnderAttack
+58.soun: 58.wav # Speech / SurvivorsUnit / Yes
+59.soun: 59.wav # Speech / SurvivorsUnit / Moving
+60.soun: 60.wav # Speech / SurvivorsUnit / AlrightyThen
+61.soun: 61.wav # Speech / SurvivorsUnit / AlrightyThen
+62.soun: 62.wav # Speech / SurvivorsUnit / WeNeedBackup
+63.soun: 63.wav # Speech / SurvivorsUnit / Okay
+64.soun: 64.wav # Speech / SurvivorsUnit / Yes
+65.soun: 65.wav # Speech / SurvivorsUnit / YesSir
+66.soun: 66.wav # Speech / SurvivorsUnit / WhatTheHell
+67.soun: 67.wav # Speech / SurvivorsUnit / IllTakeHim
+68.soun: 68.wav # Speech / SurvivorsUnit / Okay
+69.soun: 69.wav # Speech / SurvivorsUnit / IllTakeHim
+70.soun: 70.wav # Speech / SurvivorsUnit / WereUnderAttack
+71.soun: 71.wav # Speech / SurvivorsAnnouncer / VehicleComplete
+72.soun: 72.wav # Speech / SurvivorsVeteran / ImThere
+73.soun: 73.wav # Speech / SurvivorsVeteran / Yup
+74.soun: 74.wav # Speech / SurvivorsVeteran / ImThere
+75.soun: 75.wav # Speech / SurvivorsVeteran / ImThere
+76.soun: 76.wav # Speech / SurvivorsVeteran / Yup
+77.soun: 77.wav # Speech / SurvivorsVeteran / ImListening
+78.soun: 78.wav # Speech / SurvivorsVeteran / ImListening
+79.soun: 79.wav # Speech / SurvivorsVeteran / Yup
+#80.soun: 80.wav # Only in kknd2_evolved_beta1.spk
+#81.soun: 81.wav # Only in kknd2_evolved_beta1.spk
+#82.soun: 82.wav # Only in kknd2_evolved_beta1.spk
+#83.soun: 83.wav # Only in kknd2_evolved_beta1.spk
+#84.soun: 84.wav # Only in kknd2_evolved_beta1.spk
+#85.soun: 85.wav # Only in kknd2_evolved_beta1.spk
+#86.soun: 86.wav # Only in kknd2_evolved_beta1.spk
+#87.soun: 87.wav # Only in kknd2_evolved_beta1.spk
+#88.soun: 88.wav # Only in kknd2_evolved_beta1.spk
+#89.soun: 89.wav # Only in kknd2_evolved_beta1.spk
+#90.soun: 90.wav # Only in kknd2_evolved_beta1.spk
+#91.soun: 91.wav # Only in kknd2_evolved_beta1.spk
+#92.soun: 92.wav # Only in kknd2_evolved_beta1.spk
+#93.soun: 93.wav # Only in kknd2_evolved_beta1.spk
+#94.soun: 94.wav # Only in kknd2_evolved_beta1.spk
+#95.soun: 95.wav # Only in kknd2_evolved_beta1.spk
+#96.soun: 96.wav # Only in kknd2_evolved_beta1.spk
+#97.soun: 97.wav # Only in kknd2_evolved_beta1.spk
+#98.soun: 98.wav # Only in kknd2_evolved_beta1.spk
+#99.soun: 99.wav # Only in kknd2_evolved_beta1.spk
+#100.soun: 100.wav # Only in kknd2_evolved_beta1.spk
+#101.soun: 101.wav # Only in kknd2_evolved_beta1.spk
+#102.soun: 102.wav # Only in kknd2_evolved_beta1.spk
+#103.soun: 103.wav # Only in kknd2_evolved_beta1.spk
+#104.soun: 104.wav # Only in kknd2_evolved_beta1.spk
+#105.soun: 105.wav # Only in kknd2_evolved_beta1.spk
+#106.soun: 106.wav # Only in kknd2_evolved_beta1.spk
+#107.soun: 107.wav # Only in kknd2_evolved_beta1.spk
+#108.soun: 108.wav # Only in kknd2_evolved_beta1.spk
+#109.soun: 109.wav # Only in kknd2_evolved_beta1.spk
+#110.soun: 110.wav # Only in kknd2_evolved_beta1.spk
+#111.soun: 111.wav # Only in kknd2_evolved_beta1.spk
+#112.soun: 112.wav # Only in kknd2_evolved_beta1.spk
+#113.soun: 113.wav # Only in kknd2_evolved_beta1.spk
+#114.soun: 114.wav # Only in kknd2_evolved_beta1.spk
+#115.soun: 115.wav # Only in kknd2_evolved_beta1.spk
+#116.soun: 116.wav # Only in kknd2_evolved_beta1.spk
+#117.soun: 117.wav # Only in kknd2_evolved_beta1.spk
+#118.soun: 118.wav # Only in kknd2_evolved_beta1.spk
+#119.soun: 119.wav # Only in kknd2_evolved_beta1.spk
+#120.soun: 120.wav # Only in kknd2_evolved_beta1.spk
+#121.soun: 121.wav # Only in kknd2_evolved_beta1.spk
+#122.soun: 122.wav # Only in kknd2_evolved_beta1.spk
+#123.soun: 123.wav # Only in kknd2_evolved_beta1.spk
+#124.soun: 124.wav # Only in kknd2_evolved_beta1.spk
+#125.soun: 125.wav # Only in kknd2_evolved_beta1.spk
+#126.soun: 126.wav # Only in kknd2_evolved_beta1.spk
+#127.soun: 127.wav # Only in kknd2_series9_beta1.slv
+#128.soun: 128.wav # Only in kknd2_series9_beta1.slv
+#129.soun: 129.wav # Only in kknd2_series9_beta1.slv
+#130.soun: 130.wav # Only in kknd2_series9_beta1.slv
+#131.soun: 131.wav # Only in kknd2_series9_beta1.slv
+#132.soun: 132.wav # Only in kknd2_series9_beta1.slv
+#133.soun: 133.wav # Only in kknd2_series9_beta1.slv
+#134.soun: 134.wav # Only in kknd2_series9_beta1.slv
+#135.soun: 135.wav # Only in kknd2_series9_beta1.slv
+#136.soun: 136.wav # Only in kknd2_series9_beta1.slv
+#137.soun: 137.wav # Only in kknd2_series9_beta1.slv
+#138.soun: 138.wav # Only in kknd2_series9_beta1.slv
+#139.soun: 139.wav # Only in kknd2_series9_beta1.slv
+#140.soun: 140.wav # Only in kknd2_series9_beta1.slv
+#141.soun: 141.wav # Only in kknd2_series9_beta1.slv
+#142.soun: 142.wav # Only in kknd2_series9_beta1.slv
+#143.soun: 143.wav # Only in kknd2_series9_beta1.slv
+#144.soun: 144.wav # Only in kknd2_series9_beta1.slv
+#145.soun: 145.wav # Only in kknd2_series9_beta1.slv
+#146.soun: 146.wav # Only in kknd2_series9_beta1.slv
+#147.soun: 147.wav # Only in kknd2_series9_beta1.slv
+#148.soun: 148.wav # Only in kknd2_series9_beta1.slv
+#149.soun: 149.wav # Only in kknd2_series9_beta1.slv
+#150.soun: 150.wav # Only in kknd2_series9_beta1.slv
+#151.soun: 151.wav # Only in kknd2_series9_beta1.slv
+#152.soun: 152.wav # Only in kknd2_series9_beta1.slv
+#153.soun: 153.wav # Only in kknd2_series9_beta1.slv
+#154.soun: 154.wav # Only in kknd2_series9_beta1.slv
+#155.soun: 155.wav # Only in kknd2_series9_beta1.slv
+#156.soun: 156.wav # Only in kknd2_series9_beta1.slv
+#157.soun: 157.wav # Only in kknd2_series9_beta1.slv
+#158.soun: 158.wav # Only in kknd2_series9_beta1.slv
+#159.soun: 159.wav # Only in kknd2_series9_beta1.slv
+#160.soun: 160.wav # Only in kknd2_series9_beta1.slv
+#161.soun: 161.wav # Only in kknd2_series9_beta1.slv
+#162.soun: 162.wav # Only in kknd2_series9_beta1.slv
+#163.soun: 163.wav # Only in kknd2_series9_beta1.slv
+#164.soun: 164.wav # Only in kknd2_series9_beta1.slv
+#165.soun: 165.wav # Only in kknd2_series9_beta1.slv
+#166.soun: 166.wav # Only in kknd2_series9_beta1.slv
+#167.soun: 167.wav # Only in kknd2_series9_beta1.slv
+#168.soun: 168.wav # Only in kknd2_series9_beta1.slv
+#169.soun: 169.wav # Only in kknd2_series9_beta1.slv
+#170.soun: 170.wav # Only in kknd2_series9_beta1.slv
+#171.soun: 171.wav # Only in kknd2_series9_beta1.slv
+#172.soun: 172.wav # Only in kknd2_series9_beta1.slv
+#173.soun: 173.wav # Only in kknd2_series9_beta1.slv
+#174.soun: 174.wav # Only in kknd2_evolved_beta1.spk
+#175.soun: 175.wav # Only in kknd2_evolved_beta1.spk
+#176.soun: 176.wav # Only in kknd2_evolved_beta1.spk
+#177.soun: 177.wav # Only in kknd2_evolved_beta1.spk
+#178.soun: 178.wav # Only in kknd2_evolved_beta1.spk
+#179.soun: 179.wav # Only in kknd2_evolved_beta1.spk
+#180.soun: 180.wav # Only in kknd2_evolved_beta1.spk
+#181.soun: 181.wav # Only in kknd2_evolved_beta1.spk
+#182.soun: 182.wav # Only in kknd2_evolved_beta1.spk
+#183.soun: 183.wav # Only in kknd2_evolved_beta1.spk
+184.soun: 184.wav # Effect / Death1
+185.soun: 185.wav # Effect / Death2
+186.soun: 186.wav # Effect / Death3
+187.soun: 187.wav # Effect / Death4
+188.soun: 188.wav # Effect / Death5
+189.soun: 189.wav # Bunker / TargetLocked
+190.soun: 190.wav # Bunker / Target
+191.soun: 191.wav # Bunker / SystemsReady
+192.soun: 192.wav # Bunker / Mirrorfied
+193.soun: 193.wav # Bunker / OnYourCommand
+194.soun: 194.wav # Bunker / Affirmative
+195.soun: 195.wav # Bunker / KrushKillAndDestroy
+196.soun: 196.wav # Bunker / WhatTheHell
+197.soun: 197.wav # Effect / Bunker

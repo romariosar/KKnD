@@ -1,12 +1,14 @@
 #region Copyright & License Information
+
 /*
- * Copyright 2016-2018 The KKnD Developers (see AUTHORS)
+ * Copyright 2016-2019 The KKnD Developers (see AUTHORS)
  * This file is part of KKnD, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
  * information, see COPYING.
  */
+
 #endregion
 
 using System.Collections.Generic;
@@ -18,154 +20,216 @@ using FS = OpenRA.FileSystem.FileSystem;
 
 namespace OpenRA.Mods.Kknd.FileSystem
 {
-	public enum Version { KKND1, KKND2, UNKNOWN }
+    public enum Version
+    {
+        KKND1,
+        KKND2_ALPHA,
+        KKND2,
+        UNKNOWN
+    }
 
-	public class LvlPackageLoader : IPackageLoader
-	{
-		class NonDisposingSegmentStream : SegmentStream
-		{
-			public NonDisposingSegmentStream(Stream stream, long offset, long count) : base(stream, offset, count) { }
+    public class NonDisposingSegmentStream : SegmentStream
+    {
+        public NonDisposingSegmentStream(Stream stream, long offset, long count) : base(stream, offset, count)
+        {
+        }
 
-			// TODO try to get rid of this, but something is disposing the stream!
-			protected override void Dispose(bool disposing) { }
-		}
+        protected override void Dispose(bool disposing)
+        {
+            // TODO get rid of this class!
+        }
+    }
 
-		public sealed class LvlPackage : IReadOnlyPackage
-		{
-			// TODO replace by uint[] for performance
-			public struct Entry
-			{
-				public readonly uint Offset;
-				public readonly uint Length;
+    public class LvlPackageLoader : IPackageLoader
+    {
+        public sealed class LvlPackage : IReadOnlyPackage
+        {
+            public string Name { get; private set; }
+            public Version Version { get; private set; }
 
-				public Entry(uint offset, uint length)
-				{
-					Offset = offset;
-					Length = length;
-				}
-			}
+            public IEnumerable<string> Contents
+            {
+                get { return index.Keys; }
+            }
 
-			public string Name { get; private set; }
-			public IEnumerable<string> Contents { get { return index.Keys; } }
+            private readonly Dictionary<string, uint[]> index = new Dictionary<string, uint[]>();
+            private readonly SegmentStream stream;
 
-			readonly Dictionary<string, Entry> index = new Dictionary<string, Entry>();
-			readonly Stream s;
+            public LvlPackage(SegmentStream stream, string name, Version version,
+                System.Collections.Generic.IReadOnlyDictionary<string, MiniYaml> filenames)
+            {
+                Name = name;
+                Version = version;
+                this.stream = stream;
 
-			public LvlPackage(Stream sBase, string filename, Dictionary<string, MiniYaml> lvlLookup)
-			{
-				sBase.ReadASCII(4); // DATA
-				var tmp = sBase.ReadBytes(4); // Big-Endian
-				var dataLength = (tmp[0] << 24) | (tmp[1] << 16) | (tmp[2] << 8) | tmp[3];
-				s = new SegmentStream(sBase, 8, dataLength);
-				Name = filename;
+                var fileTypesOffset = stream.ReadUInt32();
+                stream.Position = fileTypesOffset + 4;
+                var firstOffset = stream.ReadUInt32();
+                stream.Position = fileTypesOffset;
 
-				var filetypesOffset = s.ReadUInt32();
-				s.Position = filetypesOffset + 4;
-				var firstFilesOffset = s.ReadUInt32();
-				s.Position = filetypesOffset;
+                while (stream.Position < stream.Length - 8)
+                {
+                    var fileType = stream.ReadASCII(4);
+                    var fileTableOffset = stream.ReadUInt32();
 
-				while (true)
-				{
-					var filetype = s.ReadASCII(4);
-					var filesOffset = s.ReadUInt32();
-					var continueTypePosition = s.Position;
-					s.Position += 4;
-					var nextFilesOffset = s.ReadUInt32();
-					s.Position = filesOffset;
+                    var continueTypePosition = stream.Position;
 
-					if (nextFilesOffset == 0)
-						nextFilesOffset = filetypesOffset;
+                    stream.Position += 4;
 
-					for (var i = 0; s.Position < nextFilesOffset; i++)
-					{
-						var fileOffset = s.ReadUInt32();
-						uint fileLength = 0;
+                    var fileTableEndOffset = stream.ReadUInt32();
+                    if (fileTableEndOffset == 0)
+                        fileTableEndOffset = fileTypesOffset;
 
-						if (fileOffset != 0)
-						{
-							var continueFilePosition = s.Position;
+                    stream.Position = fileTableOffset;
 
-							while (fileLength == 0)
-							{
-								if (s.Position == filetypesOffset)
-									fileLength = firstFilesOffset - fileOffset;
-								else
-								{
-									var nextFileOffset = s.ReadUInt32();
+                    for (var fileId = 0; stream.Position < fileTableEndOffset; fileId++)
+                    {
+                        var fileOffset = stream.ReadUInt32();
+                        if (fileOffset == 0x00)
+                            continue;
 
-									if (nextFileOffset != 0)
-										fileLength = nextFileOffset - fileOffset;
-								}
-							}
+                        var continueFilePosition = stream.Position;
 
-							s.Position = continueFilePosition;
-						}
+                        var fileEndOffset = (uint) 0;
+                        while (fileEndOffset == 0)
+                            fileEndOffset = stream.Position == fileTypesOffset ? firstOffset : stream.ReadUInt32();
 
-						if (fileLength <= 0)
-							continue;
+                        stream.Position = continueFilePosition;
 
-						var assetFileName = i + "." + (filetype.Equals("SOUN") ? "wav" : filetype.ToLower());
+                        var fileName = fileId + "." + fileType.ToLower();
+                        if (filenames.ContainsKey(fileName))
+                            fileName = filenames[fileName].Value;
 
-						if (lvlLookup.ContainsKey(filename + "|" + assetFileName))
-							assetFileName = lvlLookup[filename + "|" + assetFileName].Value;
+                        index.Add(fileName, new[] {fileOffset, fileEndOffset - fileOffset});
+                    }
 
-						index.Add(assetFileName, new Entry(fileOffset, fileLength));
-					}
+                    stream.Position = continueTypePosition;
+                }
+            }
 
-					s.Position = continueTypePosition;
+            public IReadOnlyPackage OpenPackage(string filename, FS context)
+            {
+                // Not implemented
+                return null;
+            }
 
-					if (nextFilesOffset == filetypesOffset)
-						break;
-				}
-			}
+            public bool Contains(string filename)
+            {
+                return index.ContainsKey(filename);
+            }
 
-			public Stream GetStream(string filename)
-			{
-				Entry entry;
+            public Stream GetStream(string filename)
+            {
+                uint[] entry;
 
-				if (!index.TryGetValue(filename, out entry))
-					return null;
+                if (index.TryGetValue(filename, out entry))
+                {
+                    return new NonDisposingSegmentStream(stream, entry[0], entry[1]);
+                }
 
-				return new NonDisposingSegmentStream(s, entry.Offset, entry.Length);
-			}
+                return null;
+            }
 
-			public IReadOnlyPackage OpenPackage(string filename, FS context)
-			{
-				// Not implemented
-				return null;
-			}
+            public void Dispose()
+            {
+                stream.Dispose();
+            }
+        }
 
-			public bool Contains(string filename)
-			{
-				return index.ContainsKey(filename);
-			}
+        public bool TryParsePackage(Stream stream, string filename, FS context, out IReadOnlyPackage package)
+        {
+            SegmentStream data;
+            Version version;
 
-			public void Dispose()
-			{
-				s.Dispose();
-			}
-		}
+            if (filename.EndsWith(".lpk") || filename.EndsWith(".spk"))
+            {
+                var versionId = stream.ReadUInt32();
 
-		public bool TryParsePackage(Stream s, string filename, FS context, out IReadOnlyPackage package)
-		{
-			if (filename.EndsWith(".lpk"))
-				s = Crypter.Decrypt(s);
+                if (versionId == 0x91)
+                    version = Version.KKND2_ALPHA;
+                else
+                {
+                    stream.ReadInt32(); // TODO unk. Possibly build related.
+                    version = Version.KKND2;
+                }
 
-			var signature = s.ReadASCII(4);
-			s.Position -= 4;
+                var decompressedSize = int2.Swap(stream.ReadUInt32());
+                var compressedSize = stream.ReadUInt32();
+                data = Decompress(new SegmentStream(stream, stream.Position, compressedSize), decompressedSize);
+            }
+            else if (filename.EndsWith(".lvl") || filename.EndsWith(".slv"))
+            {
+                version = Version.KKND1;
+                stream.ReadASCII(4); // DATA
+                var dataSize = int2.Swap(stream.ReadUInt32());
+                data = new SegmentStream(stream, 8, dataSize);
+            }
+            else
+            {
+                package = null;
+                return false;
+            }
 
-			if (!signature.Equals("DATA") && !signature.Equals("DAT2"))
-			{
-				package = null;
-				return false;
-			}
+            Stream lvlLookup;
 
-			Stream lvlLookup;
-			context.TryOpen("LvlLookup.yaml", out lvlLookup);
+            if (context.TryOpen(filename + ".yaml", out lvlLookup))
+                package = new LvlPackage(data, filename, version,
+                    MiniYaml.FromStream(lvlLookup).ToDictionary(x => x.Key, x => x.Value));
+            else
+                package = new LvlPackage(data, filename, version, new Dictionary<string, MiniYaml>());
 
-			package = new LvlPackage(s, filename, MiniYaml.FromStream(lvlLookup).ToDictionary(x => x.Key, x => x.Value));
+            return true;
+        }
 
-			return true;
-		}
-	}
+        private static SegmentStream Decompress(Stream compressedStream, uint decompressedSize)
+        {
+            var decompressedStream = new MemoryStream(new byte[decompressedSize]);
+
+            while (decompressedStream.Position < decompressedStream.Capacity)
+            {
+                var chunkDecompressedSize = compressedStream.ReadUInt32();
+                var chunkCompressedSize = compressedStream.ReadUInt32();
+
+                if (chunkCompressedSize == chunkDecompressedSize)
+                    decompressedStream.WriteArray(compressedStream.ReadBytes((int) chunkCompressedSize));
+                else
+                {
+                    var chunkEndOffset = compressedStream.Position + chunkCompressedSize;
+
+                    while (compressedStream.Position < chunkEndOffset)
+                    {
+                        var bitmask = compressedStream.ReadBytes(2);
+
+                        for (var i = 0; i < 16; i++)
+                        {
+                            if ((bitmask[i / 8] & 1 << i % 8) == 0)
+                                decompressedStream.WriteArray(compressedStream.ReadBytes(1));
+                            else
+                            {
+                                var metaBytes = compressedStream.ReadBytes(2);
+                                var readSize = 1 + (metaBytes[0] & 0x000F);
+                                var readOffset = (metaBytes[0] & 0x00F0) << 4 | metaBytes[1];
+                                var substitutes = new byte[readSize];
+                                var returnPosition = decompressedStream.Position;
+
+                                for (var j = 0; j < readSize; j++)
+                                {
+                                    decompressedStream.Position = returnPosition - readOffset + j % readOffset;
+                                    substitutes[j] = decompressedStream.ReadUInt8();
+                                }
+
+                                decompressedStream.Position = returnPosition;
+                                decompressedStream.WriteArray(substitutes);
+                            }
+
+                            if (compressedStream.Position == chunkEndOffset)
+                                break;
+                        }
+                    }
+                }
+            }
+
+            return new SegmentStream(decompressedStream, 0, decompressedSize);
+        }
+    }
 }

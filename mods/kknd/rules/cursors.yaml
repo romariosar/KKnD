@@ -1,0 +1,5 @@
+World:
+	PaletteFromMobd@B_Cursors:
+		Name: B_Cursors
+		Filename: kknd2_sprites|B_Cursors.mobd
+		CursorPalette: true

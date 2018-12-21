@@ -1,0 +1,192 @@
+0.soun: 0.wav # Speech / Unknown / Okay
+1.soun: 1.wav # Speech / Unknown / Receiving
+2.soun: 2.wav # Effect / Bang
+3.soun: 3.wav # Effect / Explosion
+4.soun: 4.wav # Effect / Machinegun
+5.soun: 5.wav # Effect / MachinegunLight
+6.soun: 6.wav # Effect / Minigun
+7.soun: 7.wav # Effect / MachinegunMedium
+8.soun: 8.wav # Effect / MachinegunHeavy
+9.soun: 9.wav # Effect / Cannon
+10.soun: 10.wav # Effect / ExplosionLight
+11.soun: 11.wav # Effect / Ricochet 1
+12.soun: 12.wav # Effect / Ricochet 2
+13.soun: 13.wav # Effect / Ricochet 3
+14.soun: 14.wav # Effect / Rocket
+15.soun: 15.wav # Effect / Powerup
+16.soun: 16.wav # Effect / Pistol
+17.soun: 17.wav # Effect / Shotgun
+18.soun: 18.wav # Effect / Raygun
+#19.soun: 19.son # Missing
+#20.soun: 20.son # Missing
+#21.soun: 21.son # Missing
+#22.soun: 22.son # Missing
+#23.soun: 23.son # Missing
+#24.soun: 24.son # Missing
+#25.soun: 25.son # Missing
+#26.soun: 26.son # Missing
+#27.soun: 27.son # Missing
+#28.soun: 28.son # Missing
+#29.soun: 29.son # Missing
+#30.soun: 30.son # Missing
+#31.soun: 31.son # Missing
+#32.soun: 32.son # Missing
+#33.soun: 33.son # Missing
+#34.soun: 34.son # Missing
+#35.soun: 35.son # Missing
+#36.soun: 36.son # Missing
+#37.soun: 37.son # Missing
+#38.soun: 38.son # Missing
+#39.soun: 39.son # Missing
+#40.soun: 40.son # Missing
+#41.soun: 41.son # Missing
+#42.soun: 42.son # Missing
+#43.soun: 43.son # Missing
+#44.soun: 44.son # Missing
+#45.soun: 45.son # Missing
+#46.soun: 46.son # Missing
+#47.soun: 47.son # Missing
+#48.soun: 48.son # Missing
+#49.soun: 49.son # Missing
+#50.soun: 50.son # Missing
+#51.soun: 51.son # Missing
+#52.soun: 52.son # Missing
+#53.soun: 53.son # Missing
+#54.soun: 54.son # Missing
+#55.soun: 55.son # Missing
+#56.soun: 56.son # Missing
+#57.soun: 57.son # Missing
+#58.soun: 58.son # Missing
+#59.soun: 59.son # Missing
+#60.soun: 60.son # Missing
+#61.soun: 61.son # Missing
+#62.soun: 62.son # Missing
+#63.soun: 63.son # Missing
+#64.soun: 64.son # Missing
+#65.soun: 65.son # Missing
+#66.soun: 66.son # Missing
+#67.soun: 67.son # Missing
+#68.soun: 68.son # Missing
+#69.soun: 69.son # Missing
+#70.soun: 70.son # Missing
+#71.soun: 71.son # Missing
+#72.soun: 72.son # Missing
+#73.soun: 73.son # Missing
+#74.soun: 74.son # Missing
+#75.soun: 75.son # Missing
+#76.soun: 76.son # Missing
+#77.soun: 77.son # Missing
+#78.soun: 78.son # Missing
+#79.soun: 79.son # Missing
+#80.soun: 80.son # Missing
+#81.soun: 81.son # Missing
+#82.soun: 82.son # Missing
+#83.soun: 83.son # Missing
+#84.soun: 84.son # Missing
+#85.soun: 85.son # Missing
+86.soun: 86.wav # Effect / Fire
+87.soun: 87.wav # Effect / Laser
+88.soun: 88.wav # Effect / Missile
+89.soun: 89.wav # Effect / Arrow
+90.soun: 90.wav # Effect / ArrowHit
+91.soun: 91.wav # Speech / EvolvedUnit / ImWalking
+92.soun: 92.wav # Speech / EvolvedUnit / ThatsSoDead
+93.soun: 93.wav # Speech / EvolvedAnnouncer(OLD) / BuildingBreached
+94.soun: 94.wav # Speech / EvolvedAnnouncer / BuildingLost
+95.soun: 95.wav # Speech / EvolvedUnit / TheBuildingIsOurs
+96.soun: 96.wav # Speech / EvolvedAnnouncer / BuildingReady
+97.soun: 97.wav # Speech / EvolvedUnit / BuildingTaken
+98.soun: 98.son # Speech / EvolvedUnit / Bingo
+99.soun: 99.son # Speech / EvolvedUnit(OLD) / Bingolo
+100.soun: 100.son # Speech / EvolvedAnnouncer / EarthbloodIsBecomingScarce
+101.soun: 101.wav # Speech / EvolvedAnnouncer / TheyGotOneOfOurBuildings
+102.soun: 102.wav # Speech / EvolvedAnnouncer / Completed
+103.soun: 103.son # Speech / EvolvedAnnouncer / LetsCrushThem
+104.soun: 104.wav # Speech / EvolvedAnnouncer / BuildingNowSmarter
+105.soun: 105.wav # Speech / EvolvedUnit / EnemyBuildingInfiltrated
+106.soun: 106.son # Speech / EvolvedUnit / Heureka
+107.soun: 107.wav # Speech / EvolvedAnnouncer / Finished
+108.soun: 108.wav # Speech / EvolvedUnit / FixingBuilding
+109.soun: 109.wav # Speech / EvolvedAnnouncer / BuildingUp
+110.soun: 110.wav # Speech / EvolvedUnit / GetOutOfMyHouse
+111.soun: 111.son # Speech / EvolvedUnit / TheyGoBoom
+112.soun: 112.son # Speech / EvolvedUnit / WhatsThatInTheSky
+113.soun: 113.son # Speech / EvolvedUnit / HelloAnybodyHome
+114.soun: 114.son # Speech / EvolvedUnit / ThereIsBloodEverywhere
+115.soun: 115.son # Speech / EvolvedUnit / ImHurtBad
+116.soun: 116.wav # Speech / EvolvedUnit / What
+117.soun: 117.wav # Speech / EvolvedAnnouncer / TheyreInOurBase
+118.soun: 118.wav # Speech / EvolvedUnit / WeGotYaBuilding
+119.soun: 119.wav # Speech / EvolvedUnit / Hehehehe
+120.soun: 120.son # Speech / EvolvedUnit / WatchMeFly
+121.soun: 121.son # Speech / EvolvedUnit / No
+122.soun: 122.wav # Speech / EvolvedAnnouncer / EarthbloodLow
+123.soun: 123.wav # Speech / EvolvedUnit / Okay
+124.soun: 124.wav # Speech / EvolvedUnit / TakingCareOfSome
+125.soun: 125.wav # Speech / EvolvedUnit / ImAlive
+126.soun: 126.wav # Speech / EvolvedAnnouncer / Poundering
+127.soun: 127.wav # Speech / EvolvedAnnouncer / Repairing
+128.soun: 128.wav # Speech / EvolvedAnnouncer / OurRigIsBeingAttacked
+129.soun: 129.wav # Speech / EvolvedAnnouncer / TheyreShootingAtOurCamp
+130.soun: 130.son # Speech / EvolvedUnit / LookieHere
+131.soun: 131.wav # Speech / EvolvedUnit / SureThing
+132.soun: 132.wav # Speech / EvolvedUnit / OurTankIsUnderAttack
+133.soun: 133.wav # Speech / EvolvedUnit / OhYeah
+134.soun: 134.son # Speech / EvolvedUnit / Hey
+135.soun: 135.son # Speech / EvolvedAnnouncer / UnitLost
+136.soun: 136.wav # Speech / EvolvedAnnouncer / TheWaspsAwait
+137.soun: 137.son # Speech / EvolvedAnnouncer / BewareTheHeavensWorms
+138.soun: 138.son # Speech / EvolvedUnit / Yahoo
+139.soun: 139.wav # Speech / EvolvedUnit / Speak
+140.soun: 140.wav # Speech / EvolvedUnit / Yeah
+141.soun: 141.wav # Speech / EvolvedUnit / Yes
+142.soun: 142.wav # Speech / EvolvedUnit / YoureTalkingToMe
+143.soun: 143.son # Speech / EvolvedVeteran(OLD) / AirialActionTime
+#144.soun: 144.son # Missing
+#145.soun: 145.son # Missing
+146.soun: 146.son # Speech / EvolvedVeteran / WeGotTheirBuilding
+147.soun: 147.son # Speech / EvolvedVeteran / WereInside
+148.soun: 148.wav # Speech / EvolvedVeteran / YourneyHasBegun
+#149.soun: 149.son # Missing
+#150.soun: 150.son # Missing
+151.soun: 151.son # Speech / EvolvedVeteran / TheyreOnUs
+152.soun: 152.son # Speech / EvolvedVeteran / IFoundAPlaymate
+153.soun: 153.wav # Speech / EvolvedUnit / WithPleasure
+154.soun: 154.wav # Speech / EvolvedUnit / BeThereSoon
+#155.soun: 155.son # Missing
+156.soun: 156.wav # Speech / EvolvedUnit / Huh
+#157.soun: 157.son # Missing
+158.soun: 158.wav # Speech / EvolvedUnit / Yes
+159.soun: 159.wav # Creature / MastodonOrder
+160.soun: 160.wav # Creature / MastodonSelect
+161.soun: 161.wav # Effect / Splat
+162.soun: 162.wav # Effect / Wasp
+163.soun: 163.wav # Effect / Bomb
+164.soun: 164.wav # Creature / WolfOrder
+165.soun: 165.wav # Creature / WolfSelect
+166.soun: 166.wav # Effect / Mission1
+167.soun: 167.wav # Effect / Mission2
+168.soun: 168.wav # Creature / BeetleSelect
+169.soun: 169.wav # Creature / BeetleOrder
+170.soun: 170.wav # Creature / CrabSelect
+171.soun: 171.wav # Creature / CrabOrder
+172.soun: 172.wav # Creature / ScorpionSelect
+173.soun: 173.wav # Creature / ScorpionOrder
+174.soun: 174.wav # Effect / Death1
+175.soun: 175.wav # Effect / Death2
+176.soun: 176.wav # Effect / Death3
+177.soun: 177.wav # Effect / Death4
+178.soun: 178.wav # Effect / Death5
+179.soun: 179.wav # Bunker / TargetLocked
+180.soun: 180.wav # Bunker / Target
+181.soun: 181.wav # Bunker / SystemsReady
+182.soun: 182.wav # Bunker / Mirrorfied
+183.soun: 183.wav # Bunker / OnYourCommand
+184.soun: 184.wav # Bunker / Affirmative
+185.soun: 185.wav # Bunker / KrushKillAndDestroy
+186.soun: 186.wav # Bunker / WhatTheHell
+187.soun: 187.wav # Effect / Energy
+188.soun: 188.wav # Effect / Gort
+189.soun: 189.wav # Effect / Bunker
+190.soun: 190.wav # Effect / Reload
+191.soun: 191.wav # Effect / GetOil
