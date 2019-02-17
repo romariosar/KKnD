@@ -11,17 +11,74 @@
 
 #endregion
 
+using System.Collections.Generic;
+using System.Drawing;
+using OpenRA.Graphics;
 using OpenRA.Mods.Kknd.Widgets.Widgets;
+using OpenRA.Mods.Kknd.Widgets.Widgets.Layouts;
+using OpenRA.Mods.Kknd.Widgets.Widgets.Styles;
+using OpenRA.Mods.Kknd.Widgets.Widgets.Widgets;
 
 namespace OpenRA.Mods.Kknd.Widgets
 {
     public class UiBridge : OpenRA.Widgets.Widget
     {
-        private Widget NewUiRoot;
+        private ContainerWidget NewUiRoot;
+
+        public Dictionary<string, Dictionary<int, SpriteFont>> fonts = new Dictionary<string, Dictionary<int, SpriteFont>>();
+
+        public static UiBridge instance;
 
         public UiBridge()
         {
-            NewUiRoot = new Widget();
+            instance = this;
+
+            NewUiRoot = new ContainerWidget
+            {
+                ContainerStyle = new BoxModelContainerStyle
+                {
+                    BackgroundColor = Color.Red,
+                    BorderColor = Color.HotPink,
+                    Border = new Int4(30, 20, 10, 0),
+                    Margin = new Int4(50),
+                    Padding = new Int4(10)
+                }
+            };
+
+            var topLeft = new ContainerWidget
+            {
+                ContainerStyle = new BoxModelContainerStyle
+                {
+                    BackgroundColor = Color.Blue
+                }
+            };
+
+            var bottomRight = new ContainerWidget
+            {
+                ContainerStyle = new BoxModelContainerStyle
+                {
+                    BackgroundColor = Color.Green
+                }
+            };
+
+            var centerText = new LabelWidget
+            {
+                Text = "You're talking to me?",
+                TextStyle = new TrueTypeTextStyle
+                {
+                    Color = Color.CornflowerBlue,
+                    Font = "Rajdhani-SemiBold",
+                    Size = 48
+                }
+            };
+
+            var layout = new GridLayout(new int?[] {250, null, 250}, new int?[] {250, null, 250});
+            layout.Add(topLeft, new Rectangle(0, 0, 1, 1));
+            layout.Add(bottomRight, new Rectangle(2, 2, 1, 1));
+            layout.Add(centerText, new Rectangle(1, 1, 1, 1));
+            NewUiRoot.Layout = layout;
+
+            NewUiRoot.Resize(new Rectangle(Point.Empty, Game.Renderer.Resolution));
         }
 
         public override void Draw()
@@ -29,8 +86,27 @@ namespace OpenRA.Mods.Kknd.Widgets
             NewUiRoot.Draw();
         }
 
+        public SpriteFont GetFont(string fontFamily, int fontSize)
+        {
+            if (!fonts.ContainsKey(fontFamily))
+                fonts.Add(fontFamily, new Dictionary<int, SpriteFont>());
 
-        /*private int currentMobdId = 422;
+            if (!fonts[fontFamily].ContainsKey(fontSize))
+            {
+                fonts[fontFamily][fontSize] = new SpriteFont(
+                    fontFamily,
+                    Game.ModData.DefaultFileSystem.Open("kknd|assets/" + fontFamily + ".ttf").ReadAllBytes(),
+                    fontSize,
+                    1,
+                    new SheetBuilder(SheetType.BGRA, 512)
+                );
+            }
+
+            return fonts[fontFamily][fontSize];
+        }
+
+
+        /*private int currentMobdId = 0;
         private Mobd currentMobd;
         private Sprite currentSprite;
 

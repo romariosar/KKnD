@@ -11,19 +11,15 @@
 
 #endregion
 
+using System.Collections.Generic;
 using System.Drawing;
 
 namespace OpenRA.Mods.Kknd.Widgets.Widgets
 {
-    public abstract class Widget
+    public interface ILayout
     {
-        public Rectangle Bounds;
-
-        public abstract void Draw();
-
-        public virtual void Resize(Rectangle renderArea)
-        {
-            Bounds = new Rectangle(renderArea.Location, renderArea.Size);
-        }
+        IEnumerable<Widget> Children { get; }
+        void AlignChildren(Rectangle contentBounds);
+        void Draw();
     }
 }

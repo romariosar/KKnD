@@ -15,15 +15,10 @@ using System.Drawing;
 
 namespace OpenRA.Mods.Kknd.Widgets.Widgets
 {
-    public abstract class Widget
+    public interface IContainerStyle
     {
-        public Rectangle Bounds;
-
-        public abstract void Draw();
-
-        public virtual void Resize(Rectangle renderArea)
-        {
-            Bounds = new Rectangle(renderArea.Location, renderArea.Size);
-        }
+        Rectangle GetContentBounds(Rectangle bounds);
+        void Draw();
+        void Resize(Rectangle bounds);
     }
 }

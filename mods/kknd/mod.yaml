@@ -55,6 +55,3 @@ Rules:
 	kknd|rules/cursors.yaml
 
 Fonts:
-	Regular:
-		Font: kknd|assets/unispace.ttf
-		Size: 14
